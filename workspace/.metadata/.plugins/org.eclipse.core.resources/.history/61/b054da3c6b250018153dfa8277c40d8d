@@ -1,0 +1,18 @@
+package model;
+
+public class Animal {
+
+	private String nome;
+
+	private String dataNasc;
+
+	private int sexo;
+
+	private String ra;
+
+	private String peso;
+
+	private Consulta consulta;
+
+
+}

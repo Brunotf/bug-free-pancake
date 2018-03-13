@@ -1,0 +1,16 @@
+package controller;
+
+import model.Cliente;
+
+public class ControleCliente {
+	
+	public boolean verificaCpf(Cliente cpf) {
+		boolean verificador = false;
+		return verificador;
+	}
+	
+	public Cliente consultaCliente(Cliente nome) {
+		return 
+	}
+
+}

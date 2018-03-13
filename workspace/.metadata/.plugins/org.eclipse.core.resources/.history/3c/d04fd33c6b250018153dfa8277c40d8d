@@ -1,0 +1,17 @@
+package model;
+
+public class Historico {
+
+	private String dataHora;
+
+	private String diagnostico;
+
+	private String descricaoConsulta;
+
+	private String observacoes;
+
+	public void gerarPdf() {
+
+	}
+
+}

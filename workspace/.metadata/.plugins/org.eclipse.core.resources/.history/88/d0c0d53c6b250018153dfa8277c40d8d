@@ -1,0 +1,19 @@
+package model;
+
+public class Consulta {
+
+	private String dataHora;
+
+	private String procedimento;
+
+	private String sintomas;
+
+	private String tipoAtend;
+
+	private Animal animal;
+
+	private Veterinario veterinario;
+
+	
+
+}

@@ -1,0 +1,25 @@
+package model;
+
+public class Veterinario {
+
+	private String crmv;
+
+	private String nome;
+
+	private Date dataNasc;
+
+	private String cpf;
+
+	private String telefone;
+
+	private String especialidade;
+
+	public Veterinario get() {
+		return null;
+	}
+
+	public void set() {
+
+	}
+
+}

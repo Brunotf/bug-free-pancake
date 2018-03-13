@@ -1,0 +1,19 @@
+public class Conta {
+
+	private double valor;
+
+	private int formaPag;
+
+	private double desconto;
+
+	private Date horario;
+
+	public Conta get() {
+		return null;
+	}
+
+	public void gerarDesconto() {
+
+	}
+
+}

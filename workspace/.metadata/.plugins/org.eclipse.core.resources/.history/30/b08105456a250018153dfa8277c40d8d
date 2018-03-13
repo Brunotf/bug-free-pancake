@@ -1,0 +1,17 @@
+package model;
+
+public class Especie {
+
+	private String nome;
+
+	private String raca;
+
+	public Animal get() {
+		return null;
+	}
+
+	public void set() {
+
+	}
+
+}
