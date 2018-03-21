@@ -1,7 +1,5 @@
 package model;
 
-import java.util.HashSet;
-
 import enumaration.DiaSemana;
 
 public class Veterinario {
@@ -23,8 +21,6 @@ public class Veterinario {
 	protected double valorHora;
 	
 	private double salario;
-	
-	private HashSet<Consulta> consulta;
 
 	public Veterinario(String crmv, String nome, String dataNasc, String cpf, String telefone, DiaSemana diasDisponiveis,
 			int diasTrabalhados, double valorHora, double salario) {
@@ -103,14 +99,6 @@ public class Veterinario {
 		this.diasDisponiveis = diasDisponiveis;
 	}
 	
-	public HashSet<Consulta> getConsulta() {
-		return consulta;
-	}
-
-	public void setConsulta(HashSet<Consulta> consulta) {
-		this.consulta = consulta;
-	}
-
 	public double gerarSalario(double bonus) {
 		return (diasTrabalhados * valorHora) + bonus;
 	}

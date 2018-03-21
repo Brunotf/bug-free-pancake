@@ -1,7 +1,5 @@
 package model;
 
-import java.util.HashSet;
-
 public class Historico {
 
 	private int numProntuario;
@@ -13,10 +11,6 @@ public class Historico {
 	private String descricaoConsulta;
 
 	private String observacoes;
-	
-	private HashSet<Consulta> consulta;
-	
-	private HashSet<Exame> exame;
 	
 	public int getNumProntuario() {
 		return numProntuario;
@@ -58,22 +52,6 @@ public class Historico {
 		this.observacoes = observacoes;
 	}
 	
-	public HashSet<Consulta> getConsulta() {
-		return consulta;
-	}
-
-	public void setConsulta(HashSet<Consulta> consulta) {
-		this.consulta = consulta;
-	}
-
-	public HashSet<Exame> getExame() {
-		return exame;
-	}
-
-	public void setExame(HashSet<Exame> exame) {
-		this.exame = exame;
-	}
-
 	public void gerarPdf() {
 		System.out.println("PDF do histórico gerado na pasta especificada.");
 	}

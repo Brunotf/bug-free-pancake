@@ -41,9 +41,5 @@ public class Exame {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	public void calcularDataResultado() {
-		this.dataResultado = dataColeta + " mais uma semana.";
-	}
 
 }

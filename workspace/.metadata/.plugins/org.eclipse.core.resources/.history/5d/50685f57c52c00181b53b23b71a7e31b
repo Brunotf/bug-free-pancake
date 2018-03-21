@@ -1,13 +1,10 @@
 package model;
 
 import java.util.HashSet;
-import enumaration.TipoEspecie;
 
 public class Animal {
 
 	private String nome;
-	
-	private TipoEspecie especie;
 
 	private String dataNasc;
 
@@ -39,14 +36,6 @@ public class Animal {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public TipoEspecie getEspecie() {
-		return especie;
-	}
-
-	public void setEspecie(TipoEspecie especie) {
-		this.especie = especie;
 	}
 
 	public String getDataNasc() {
@@ -91,10 +80,6 @@ public class Animal {
 
 	public Cliente getCpf() {
 		return cpf;
-	}
-	
-	public String calcularIdade() {
-		return "Data de nascimento do animal.";
 	}
 
 }

@@ -24,12 +24,12 @@ public class Cliente {
 
 	public Cliente(String nome, String cpf, String endereco, 
 			String telefone, String email) {
+		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.email = email;
-		Cliente.quantidadeClientes += 1;
 	}
 
 	public String getNome() {
@@ -95,5 +95,4 @@ public class Cliente {
 	public void setConta(HashSet<Conta> conta) {
 		this.conta = conta;
 	}
-
 }
