@@ -12,7 +12,26 @@ public class Veterinario {
 
 	private String telefone;
 
-	private String especialidade;
+	private String diasDisponiveis;
+	
+	protected int diasTrabalhados;
+	
+	protected double valorHora;
+	
+	private double salario;
+
+	public Veterinario(String crmv, String nome, String dataNasc, String cpf, String telefone, String diasDisponiveis,
+			int diasTrabalhados, double valorHora, double salario) {
+		this.crmv = crmv;
+		this.nome = nome;
+		this.dataNasc = dataNasc;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.diasDisponiveis = diasDisponiveis;
+		this.diasTrabalhados = diasTrabalhados;
+		this.valorHora = valorHora;
+		this.salario = salario;
+	}
 
 	public String getCrmv() {
 		return crmv;
@@ -53,13 +72,33 @@ public class Veterinario {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-	public String getEspecialidade() {
-		return especialidade;
+	
+	public String getDiasDisponiveis() {
+		return diasDisponiveis;
 	}
 
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+	public int getDiasdTrabalhados() {
+		return diasTrabalhados;
+	}
+	
+	public void setSalario(int diasTrabalhados) {
+		this.diasTrabalhados = diasTrabalhados;
+	}
+
+	public void setDiasDisponiveis(String diasDisponiveis) {
+		this.diasDisponiveis = diasDisponiveis;
+	}
+	
+	public double gerarSalario(double bonus) {
+		return (diasTrabalhados * valorHora) + bonus;
 	}
 
 }

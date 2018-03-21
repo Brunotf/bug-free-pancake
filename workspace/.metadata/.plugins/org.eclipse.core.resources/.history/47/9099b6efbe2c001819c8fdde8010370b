@@ -1,0 +1,8 @@
+package model;
+
+public class AnimalSilvestre extends Animal {
+	
+	private String marcacaoIndividual;
+	private String numeroIbama;
+
+}

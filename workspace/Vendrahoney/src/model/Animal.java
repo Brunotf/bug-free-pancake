@@ -1,5 +1,7 @@
 package model;
 
+import java.util.HashSet;
+
 public class Animal {
 
 	private String nome;
@@ -8,13 +10,25 @@ public class Animal {
 
 	private int sexo;
 
-	private String ra;
-
 	private String peso;
+	
+	private String porte;
 
-	private Consulta consulta;
+	private HashSet<Consulta> consulta;
 	
 	private Cliente cpf;
+	
+
+	public Animal(String nome, String dataNasc, int sexo, 
+			String peso, String porte, HashSet<Consulta> consulta, Cliente cpf) {
+		this.nome = nome;
+		this.dataNasc = dataNasc;
+		this.sexo = sexo;
+		this.peso = peso;
+		this.porte = porte;
+		this.consulta = consulta;
+		this.cpf = cpf;
+	}
 
 	public String getNome() {
 		return nome;
@@ -40,14 +54,6 @@ public class Animal {
 		this.sexo = sexo;
 	}
 
-	public String getRa() {
-		return ra;
-	}
-
-	public void setRa(String ra) {
-		this.ra = ra;
-	}
-
 	public String getPeso() {
 		return peso;
 	}
@@ -55,12 +61,20 @@ public class Animal {
 	public void setPeso(String peso) {
 		this.peso = peso;
 	}
+	
+	public String getPorte() {
+		return porte;
+	}
+	
+	public void setPorte(String porte) {
+		this.porte = porte;
+	}
 
-	public Consulta getConsulta() {
+	public HashSet<Consulta> getConsulta() {
 		return consulta;
 	}
 
-	public void setConsulta(Consulta consulta) {
+	public void setConsulta(HashSet<Consulta> consulta) {
 		this.consulta = consulta;
 	}
 

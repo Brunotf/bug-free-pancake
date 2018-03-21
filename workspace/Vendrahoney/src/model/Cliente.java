@@ -1,5 +1,7 @@
 package model;
 
+import java.util.HashSet;
+
 public class Cliente {
 
 	private String nome;
@@ -9,8 +11,26 @@ public class Cliente {
 	private String endereco;
 
 	private String telefone;
+	
+	private String email;
+	
+	private static int quantidadeClientes;
+	
+	private static int mediaAnimal;
 
-	private Animal[] animal;
+	private HashSet<Animal> listaAnimal;
+	
+	private HashSet<Conta> conta;
+
+	public Cliente(String nome, String cpf, String endereco, 
+			String telefone, String email) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.email = email;
+	}
 
 	public String getNome() {
 		return nome;
@@ -43,13 +63,36 @@ public class Cliente {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-	public Animal[] getAnimal() {
-		return animal;
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public static int getQuantidadeClientes() {
+		return quantidadeClientes;
+	}
+	
+	public static int getMediaAnimal() {
+		return mediaAnimal;
+	}
+ 
+	public HashSet<Animal> getAnimal() {
+		return listaAnimal;
 	}
 
-	public void setAnimal(Animal[] animal) {
-		this.animal = animal;
+	public void setAnimal(HashSet<Animal> animal) {
+		this.listaAnimal = animal;
+	}
+	
+	public HashSet<Conta> getConta() {
+		return conta;
 	}
 
+	public void setConta(HashSet<Conta> conta) {
+		this.conta = conta;
+	}
 }

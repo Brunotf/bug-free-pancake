@@ -1,20 +1,24 @@
 package model;
 
+import java.util.HashSet;
+
+import enumaration.TipoPagamento;
+
 public class Conta {
 
 	private double valor;
 
-	private int formaPag;
+	private TipoPagamento formaPag;
 
-	private double desconto;
+	@SuppressWarnings("unused")
+	private String horarioEmergencia;
 
-	private String horario;
+	private double valorFinal;
 	
-	public boolean acrescimoHorario(String horario) {
-		boolean adicional = true;
-		return adicional;
-	}
-
+	private HashSet<Consulta> consulta;
+	
+	private HashSet<Exame> exame;
+	
 	public double getValor() {
 		return valor;
 	}
@@ -23,29 +27,44 @@ public class Conta {
 		this.valor = valor;
 	}
 
-	public int getFormaPag() {
+	public TipoPagamento getFormaPag() {
 		return formaPag;
 	}
 
-	public void setFormaPag(int formaPag) {
+	public void setFormaPag(TipoPagamento formaPag) {
 		this.formaPag = formaPag;
 	}
 
-	public double getDesconto() {
-		return desconto;
+	public double getValorFinal() {
+		return valorFinal;
 	}
 
-	public void setDesconto(double desconto) {
-		this.desconto = desconto;
-	}
-
-	public String getHorario() {
-		return horario;
-	}
-
-	public void setHorario(String horario) {
-		this.horario = horario;
+	public void setValorFinal(double valorFinal) {
+		this.valorFinal = valorFinal;
 	}
 	
+	public HashSet<Consulta> getConsulta() {
+		return consulta;
+	}
+
+	public void setConsulta(HashSet<Consulta> consulta) {
+		this.consulta = consulta;
+	}
+
+	public HashSet<Exame> getExame() {
+		return exame;
+	}
+
+	public void setExame(HashSet<Exame> exame) {
+		this.exame = exame;
+	}
+
+	public double acrescimoHorario(double valor) {
+		return valor * 1.10;
+	}
+	
+	public double gerarDesconto(double valor) {
+		return valor * 0.9;
+	}
 	
 }

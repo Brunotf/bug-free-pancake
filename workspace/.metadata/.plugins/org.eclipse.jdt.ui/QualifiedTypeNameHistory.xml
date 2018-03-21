@@ -5,4 +5,9 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="model.Animal"/>
     <fullyQualifiedTypeName name="model.Cliente"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="model.AtestadoVacina"/>
+    <fullyQualifiedTypeName name="enumaration.TipoEspecialidade"/>
+    <fullyQualifiedTypeName name="enumaration.TipoPagamento"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>
