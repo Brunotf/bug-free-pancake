@@ -1,0 +1,10 @@
+package view;
+
+import controller.ControleCliente;
+
+public class main {
+	
+	ControleCliente c = new ControleCliente();
+	
+
+}

@@ -11,3 +11,7 @@
 1521610258138	Encapsulate field 'exame'
 1521610293752	Rename type 'ControleConsulta'
 1521610356460	Encapsulate field 'consulta'
+1521685055021	Delete element
+1521685123904	Delete element
+1521685222860	Encapsulate field 'diasDisponiveis'
+1521685372862	Encapsulate field 'horarioPico'

@@ -1,11 +1,11 @@
 package model;
 
-import enumaration.DiaSemana;
 import enumaration.TipoEspecialidade;
+
 public class Especialista extends Veterinario {
 	
 	public Especialista(String crmv, String nome, String dataNasc, String cpf, String telefone,
-			DiaSemana diasDisponiveis,	int diasTrabalhados, double valorHora, double salario) {
+			int diasDisponiveis, int diasTrabalhados, double valorHora, double salario) {
 		
 		super(crmv, nome, dataNasc, cpf, telefone, diasDisponiveis,	diasTrabalhados, valorHora, salario);
 	}

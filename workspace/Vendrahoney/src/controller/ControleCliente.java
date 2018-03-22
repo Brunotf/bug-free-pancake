@@ -5,22 +5,22 @@ import model.Cliente;
 
 public class ControleCliente {
 	
-	public void adicionaCliente() {
+	public void adicionaCliente(Cliente c) {
 		
 	}
 	
-	public HashSet<Cliente> consultaCliente(Cliente cliente) {
-		
+	public HashSet<Cliente> consultaCliente(Cliente c) {
+
 		HashSet<Cliente> lista = new HashSet<Cliente>();
-		lista.add(cliente);
+		lista.add(c);
 		return lista;
 	}
 	
-	public void atualizaCliente() {
+	public void atualizaCliente(Cliente c) {
 		
 	}
 	
-	public void inativaCliente() {
+	public void inativaCliente(Cliente c) {
 		
 	}
 	

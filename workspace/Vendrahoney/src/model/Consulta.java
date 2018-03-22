@@ -3,6 +3,15 @@ package model;
 public class Consulta {
 
 	private String dataHora;
+	
+	private String procedimento;
+
+	private String sintomas;
+
+	private String tipoAtend;
+	
+	private static String horarioPico;
+
 
 	public String getDataHora() {
 		return dataHora;
@@ -36,32 +45,16 @@ public class Consulta {
 		this.tipoAtend = tipoAtend;
 	}
 
-	public Animal getAnimal() {
-		return animal;
+	public static String getHorarioPico() {
+		return horarioPico;
 	}
 
-	public void setAnimal(Animal animal) {
-		this.animal = animal;
+	public static void setHorarioPico(String horarioPico) {
+		Consulta.horarioPico = horarioPico;
 	}
-
-	public Veterinario getVeterinario() {
-		return veterinario;
-	}
-
-	public void setVeterinario(Veterinario veterinario) {
-		this.veterinario = veterinario;
-	}
-
-	private String procedimento;
-
-	private String sintomas;
-
-	private String tipoAtend;
-
-	private Animal animal;
-
-	private Veterinario veterinario;
-
 	
+	public static String calculaHorarioPico() {
+		return horarioPico;
+	}
 
 }

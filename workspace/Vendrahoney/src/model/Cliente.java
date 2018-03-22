@@ -30,6 +30,8 @@ public class Cliente {
 		this.telefone = telefone;
 		this.email = email;
 		Cliente.quantidadeClientes += 1;
+		new HashSet<Animal>();
+		new HashSet<Conta>();
 	}
 
 	public String getNome() {

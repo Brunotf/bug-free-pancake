@@ -9,9 +9,10 @@
     <fullyQualifiedTypeName name="enumaration.TipoPagamento"/>
     <fullyQualifiedTypeName name="enumaration.TipoEspecie"/>
     <fullyQualifiedTypeName name="enumaration.DiaSemana"/>
-    <fullyQualifiedTypeName name="model.Cliente"/>
     <fullyQualifiedTypeName name="model.Animal"/>
     <fullyQualifiedTypeName name="model.Veterinario"/>
     <fullyQualifiedTypeName name="java.io.LineNumberInputStream"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="model.Cliente"/>
+    <fullyQualifiedTypeName name="controller.ControleCliente"/>
 </qualifiedTypeNameHistroy>
