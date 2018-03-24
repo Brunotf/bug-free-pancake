@@ -122,4 +122,9 @@ public class Veterinario {
 	public double gerarSalario(double bonus) {
 		return (diasTrabalhados * valorHora) + bonus;
 	}
+	
+	public static double getMediaSalarial (Veterinario salario) {
+		salario.
+		return mediaSalarial;
+	}
 }

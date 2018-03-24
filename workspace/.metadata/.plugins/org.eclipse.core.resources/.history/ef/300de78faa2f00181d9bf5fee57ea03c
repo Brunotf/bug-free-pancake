@@ -16,13 +16,11 @@ public class Veterinario {
 	
 	private int diasDisponiveis;
 	
-	private int diasTrabalhados;
+	protected int diasTrabalhados;
 	
-	private double valorHora;
+	protected double valorHora;
 	
 	private double salario;
-	
-	private static double mediaSalarial;
 	
 	private HashSet<Consulta> consulta;
 
@@ -95,14 +93,6 @@ public class Veterinario {
 		this.salario = salario;
 	}
 	
-	public static double getMediaSalarial() {
-		return mediaSalarial;
-	}
-
-	public static void setMediaSalarial(double mediaSalarial) {
-		Veterinario.mediaSalarial = mediaSalarial;
-	}
-
 	public int getDiasdTrabalhados() {
 		return diasTrabalhados;
 	}
@@ -122,4 +112,5 @@ public class Veterinario {
 	public double gerarSalario(double bonus) {
 		return (diasTrabalhados * valorHora) + bonus;
 	}
+
 }

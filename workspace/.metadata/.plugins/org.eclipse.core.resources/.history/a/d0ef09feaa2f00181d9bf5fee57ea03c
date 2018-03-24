@@ -29,7 +29,7 @@ public class Especialista extends Veterinario {
 	
 	@Override
 	public double gerarSalario(double bonus) {
-		return (getSalario()) + bonus;
+		return (getDiasTrabalhados() * getValorHora()) + bonus ;
 	}
 	
 	public void horaExtra() {

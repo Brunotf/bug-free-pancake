@@ -34,7 +34,7 @@ public class Veterinario {
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.diasDisponiveis = diasDisponiveis;
-		this.diasTrabalhados = diasTrabalhados;
+		this.setDiasTrabalhados(diasTrabalhados);
 		this.valorHora = valorHora;
 		this.salario = salario;
 	}
@@ -104,11 +104,11 @@ public class Veterinario {
 	}
 
 	public int getDiasdTrabalhados() {
-		return diasTrabalhados;
+		return getDiasTrabalhados();
 	}
 	
 	public void setSalario(int diasTrabalhados) {
-		this.diasTrabalhados = diasTrabalhados;
+		this.setDiasTrabalhados(diasTrabalhados);
 	}
 	
 	public HashSet<Consulta> getConsulta() {
@@ -120,6 +120,19 @@ public class Veterinario {
 	}
 
 	public double gerarSalario(double bonus) {
-		return (diasTrabalhados * valorHora) + bonus;
+		return (getDiasTrabalhados() * valorHora) + bonus;
+	}
+	
+	public static double getMediaSalarial (Veterinario v) {
+		double salario = v.salario;
+		return salario;
+	}
+
+	public int getDiasTrabalhados() {
+		return diasTrabalhados;
+	}
+
+	public void setDiasTrabalhados(int diasTrabalhados) {
+		this.diasTrabalhados = diasTrabalhados;
 	}
 }
