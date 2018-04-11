@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Queue"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="model.AtestadoVacina"/>
-    <fullyQualifiedTypeName name="enumaration.TipoEspecialidade"/>
-    <fullyQualifiedTypeName name="enumaration.TipoPagamento"/>
-    <fullyQualifiedTypeName name="enumaration.TipoEspecie"/>
-    <fullyQualifiedTypeName name="enumaration.DiaSemana"/>
-    <fullyQualifiedTypeName name="model.Cliente"/>
-    <fullyQualifiedTypeName name="model.Animal"/>
-    <fullyQualifiedTypeName name="model.Veterinario"/>
-    <fullyQualifiedTypeName name="java.io.LineNumberInputStream"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
