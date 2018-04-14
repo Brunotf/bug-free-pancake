@@ -13,6 +13,10 @@
 <script src="./resources/bootstrap.min.js"></script>
 </head>
 <body>
+    <%
+       String mgs = (String)session.getAttribute("MESSAGE");
+       
+    %>
 
 </body>
 </html>

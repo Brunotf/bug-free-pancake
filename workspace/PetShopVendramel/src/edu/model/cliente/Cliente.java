@@ -6,7 +6,7 @@ import edu.model.animal.Animal;
 import edu.model.conta.Conta;
 
 public class Cliente {
-
+	
 	private String nome;
 
 	private String cpf;
@@ -24,16 +24,6 @@ public class Cliente {
 	private HashSet<Animal> listaAnimal;
 	
 	private HashSet<Conta> conta;
-
-	public Cliente(String nome, String cpf, String endereco, 
-			String telefone, String email) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.email = email;
-		Cliente.quantidadeClientes += 1;
-	}
 
 	public String getNome() {
 		return nome;
