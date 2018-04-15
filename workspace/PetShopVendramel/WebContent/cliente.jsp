@@ -110,6 +110,8 @@ tr:nth-child(even) {
 						value="pesquisar">Pesquisar</button>
 					<button class="btn btn-primary" type="submit" name="cmd"
 						value="atualizar">Atualizar</button>
+						<button class="btn btn-primary" type="submit" name="cmd"
+						value="voltar">Voltar</button>
 				</div>
 			</div>
 

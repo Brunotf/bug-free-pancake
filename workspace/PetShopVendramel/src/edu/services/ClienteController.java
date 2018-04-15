@@ -17,34 +17,36 @@ import edu.persistence.cliente.ClienteDAOImpl;
 @WebServlet("/ClienteController")
 public class ClienteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public ClienteController() {
-        super();
-    }
+
+	public ClienteController() {
+		super();
+	}
 
 	@SuppressWarnings("unchecked")
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String txtNome = request.getParameter("txtNome");
 		String txtCpf = request.getParameter("txtCpf");
 		String txtEnd = request.getParameter("txtEnd");
 		String txtTel = request.getParameter("txtTel");
 		String txtEmail = request.getParameter("txtEmail");
-		
-		String txtCmd = request.getParameter("cmd");
-		
+
+		String cmd = request.getParameter("cmd");
+
 		ClienteDAO cDao = new ClienteDAOImpl();
-		
-		LinkedHashSet<Cliente> listaCliente = (LinkedHashSet<Cliente>) getServletContext().getAttribute("LISTA_CLIENTE");
-		
+
+		LinkedHashSet<Cliente> listaCliente = (LinkedHashSet<Cliente>) getServletContext()
+				.getAttribute("LISTA_CLIENTE");
+
 		if (listaCliente == null) {
 			listaCliente = new LinkedHashSet<>();
 			getServletContext().setAttribute("LISTA_CLIENTE", listaCliente);
 		}
-		
+
 		String message = null;
-		
-		if ("adicionar".equals(txtCmd)) {
+
+		if ("adicionar".equals(cmd)) {
 			Cliente c = new Cliente();
 
 			c.setNome(txtNome);
@@ -59,14 +61,14 @@ public class ClienteController extends HttpServlet {
 			}
 			message = String.format("Foi cadastrado o cliente %s\n", c.toString());
 
-		} else if ("pesquisar".equals(txtCmd)) {
+		} else if ("pesquisar".equals(cmd)) {
 			try {
 				listaCliente = cDao.consultarCliente(txtNome);
 				request.getSession().setAttribute("LISTA_CLIENTE", listaCliente);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		} else if ("atualizar".equals(txtCmd)) {
+		} else if ("atualizar".equals(cmd)) {
 			Cliente c = new Cliente();
 
 			c.setNome(txtNome);
@@ -79,15 +81,15 @@ public class ClienteController extends HttpServlet {
 				e.printStackTrace();
 			}
 			message = String.format("Foi atualizado o cliente %s\n", c.toString());
-			
+
+		} else if ("voltar".contains(cmd)) {
+			response.sendRedirect("./index.jsp");
 		}
-		
-		
 
 		request.getSession().setAttribute("MESSAGE", message);
 
 		response.sendRedirect("./cliente.jsp");
-		
+
 	}
 
 }

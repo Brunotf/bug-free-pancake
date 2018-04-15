@@ -9,7 +9,7 @@ public class Main {
 		BufferedReader ler = new BufferedReader(new InputStreamReader(System.in));
 
 		LinkedList<Medico> lista = new LinkedList<>();
-
+        
 		Especialista medicoChefe = new Especialista("Paulo", "1", "12345678", "Chato pa krl");;
 		
 		medicoChefe.adicionar(medicoChefe);
@@ -18,8 +18,6 @@ public class Main {
 		
 		medicoChefe.adicionar(veterinarioChefe);
 		
-		
-	
 		int op = 0;
 
 		do {			
