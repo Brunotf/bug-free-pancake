@@ -10,7 +10,7 @@ public class DBUtil {
 
 	private final static String USERNAME = "Huesil667";
 	private final static String PASSWORD = "Ab246813579cD";
-	private final static String URLDB = "jdbc:jtds:sqlserver://huesil.database.windows.net/bancomassa;namedPipes=true";
+	private final static String URLDB = "jdbc:jtds:sqlserver://huesil.database.windows.net/bdzera;namedPipes=true";
 	private static DBUtil instancia;
 	private Connection con;
 

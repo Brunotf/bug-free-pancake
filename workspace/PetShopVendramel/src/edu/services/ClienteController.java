@@ -3,7 +3,6 @@ package edu.services;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.LinkedHashSet;
-import java.util.LinkedList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +25,6 @@ public class ClienteController extends HttpServlet {
 	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String txtId = request.getParameter("txtId");
 		String txtNome = request.getParameter("txtNome");
 		String txtCpf = request.getParameter("txtCpf");
 		String txtEnd = request.getParameter("txtEnd");
@@ -53,6 +51,7 @@ public class ClienteController extends HttpServlet {
 			c.setCpf(txtCpf);
 			c.setEndereco(txtEnd);
 			c.setTelefone(txtTel);
+			c.setEmail(txtEmail);
 			try {
 				cDao.adicionarCliente(c);
 			} catch (SQLException e) {

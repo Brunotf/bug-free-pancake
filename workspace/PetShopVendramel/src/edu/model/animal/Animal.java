@@ -6,7 +6,7 @@ import edu.enumeradas.TipoEspecie;
 import edu.model.cliente.Cliente;
 import edu.model.consulta.Consulta;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
 	protected String nome;
 	
@@ -18,7 +18,7 @@ public class Animal {
 
 	protected String peso;
 	
-	protected String porte;
+	protected int idade;
 
 	protected HashSet<Consulta> consulta;
 	
@@ -64,12 +64,12 @@ public class Animal {
 		this.peso = peso;
 	}
 	
-	public String getPorte() {
-		return porte;
+	public int getIdade() {
+		return idade;
 	}
 	
-	public void setPorte(String porte) {
-		this.porte = porte;
+	public void setIdade(int porte) {
+		this.idade = porte;
 	}
 
 	public HashSet<Consulta> getConsulta() {
@@ -84,8 +84,16 @@ public class Animal {
 		return cpf;
 	}
 	
-	public String calcularIdade() {
-		return "Data de nascimento do animal.";
+	public void calcularIdade() {
+		this.idade = 0;
+	}
+
+	@Override
+	public int compareTo(Animal o) {
+		String a = o.nome;
+		String b = getNome();
+		
+		return a.compareToIgnoreCase(b);
 	}
 
 }

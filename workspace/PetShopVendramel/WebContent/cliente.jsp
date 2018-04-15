@@ -12,8 +12,7 @@
 <script src="./resources/jquery-3.2.1.slim.min.js"></script>
 <script src="./resources/popper.min.js"></script>
 <script src="./resources/bootstrap.min.js"></script>
-</head>
-<STYLE>
+<style>
 table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
@@ -29,10 +28,10 @@ td, th {
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
-</STYLE>
+</style>
 </head>
-
 <body>
+
 	<%
 		String msg = (String) session.getAttribute("MESSAGE");
 		Cliente clienteAtual = (Cliente) session.getAttribute("CLIENTEATUAL");
@@ -122,13 +121,14 @@ tr:nth-child(even) {
 		session.setAttribute("LISTA_ALUNOS", null);
 		if (listaCliente != null && listaCliente.size() > 0) {
 	%>
-	<h2>Lista dos alunos</h2>
+	<h2>Lista dos clientes</h2>
 	<table>
 		<tr>
 			<th>Nome</th>
 			<th>CPF</th>
 			<th>Endereço</th>
 			<th>Telefone</th>
+			<th>E-Mail</th>
 		</tr>
 		<%
 			for (Cliente c : listaCliente) {
@@ -138,6 +138,7 @@ tr:nth-child(even) {
 			<td><%=c.getCpf()%></td>
 			<td><%=c.getEndereco()%></td>
 			<td><%=c.getTelefone()%></td>
+			<td><%=c.getEmail()%></td>
 		</tr>
 		<%
 			}

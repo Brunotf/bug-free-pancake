@@ -45,6 +45,7 @@ public class ClienteDAOImpl implements ClienteDAO {
 			c.setCpf(rs.getString("cpf"));
 			c.setEndereco(rs.getString("endereco"));
 			c.setTelefone(rs.getString("telefone"));
+			c.setEmail(rs.getString("email"));
 
 			lista.add(c);
 		}
@@ -57,13 +58,15 @@ public class ClienteDAOImpl implements ClienteDAO {
 		con = DBUtil.getInstance().getConnection();
 		String sql = "UPDATE cliente SET nome = ?, "
 				+ "endereco = ?, "
-				+ "telefone = ? WHERE cpf = ?";
+				+ "telefone = ?, "
+				+ "email = ? WHERE cpf = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 
 		ps.setString(1, c.getNome());
 		ps.setString(2, c.getEndereco());
 		ps.setString(3, c.getTelefone());
-		ps.setString(4, c.getCpf());
+		ps.setString(4, c.getEmail());
+		ps.setString(5, c.getCpf());
 		ps.execute();
 		ps.close();
 		
