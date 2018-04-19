@@ -1,3 +1,4 @@
+package Composite;
 import java.util.LinkedList;
 
 public class Especialista extends Medico {
