@@ -38,8 +38,8 @@ public class Especialista extends Medico {
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		 sb.append(nome + " - ");
-		 sb.append(crmv + " : ");
+		 sb.append(nome + " : ");
+		 sb.append(crmv + " - ");
 		 sb.append(especialidade);		 
 		 return sb.toString();
 	}

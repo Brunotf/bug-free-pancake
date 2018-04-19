@@ -1,50 +1,39 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.LinkedList;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
-
-		BufferedReader ler = new BufferedReader(new InputStreamReader(System.in));
-
+	public static void main(String[] args) {
 		LinkedList<Medico> lista = new LinkedList<>();
-        
-		Especialista medicoChefe = new Especialista("Paulo", "1", "12345678", "Chato pa krl");;
-		
-		medicoChefe.adicionar(medicoChefe);
-		
-		Especialista veterinarioChefe = new Especialista("Ana", "2", "231415123", "super alegre");
-		
-		medicoChefe.adicionar(veterinarioChefe);
-		
-		int op = 0;
 
-		do {			
-			System.out.println("1 - novo especialista. 2 - novo veterinario. 3 - buscar medico. 6 - buscar todos. 9 - sair");
-			op = Integer.parseInt(ler.readLine());
-			
-			if (op == 1) {
-				System.out.println("Digite nome / crmv / tel / especialidade");
-				Medico m = new Especialista(ler.readLine(), ler.readLine(), ler.readLine(), ler.readLine());
-				veterinarioChefe.adicionar(m);
-			} else if (op == 2) {
-				System.out.println("Digite nome / crmv / tel");
-				Medico m = new Veterinario(ler.readLine(), ler.readLine(), ler.readLine());
-				veterinarioChefe.adicionar(m);
-			} else if (op == 3) {
-				System.out.println("Digite um valor");				
-				System.out.println(medicoChefe.obterFilha(Integer.parseInt(ler.readLine())));
-				
-			} else if (op == 6) {
-				lista = medicoChefe.obterLista();
-				for (Medico medico : lista) {
-					System.out.println(medico.toString());
-				}
-			} else if (op == 9) {
-				System.exit(0);
-			}
-		} while (op != 999);
-		
+		Especialista medicoChefe = new Especialista("Wilson", "1", "12345678", "Super especialista");
+
+		medicoChefe.adicionar(medicoChefe);
+
+		Especialista veterinarioChefe = new Especialista("Cristina", "2", "231415123", "Super veterinaria");
+
+		Especialista enfermeiroChefe = new Especialista("Ricardo", "3", "1234123", "super Enfermeira");
+
+		medicoChefe.adicionar(veterinarioChefe);
+
+		Medico v1 = new Veterinario("Neide Maria", "34123451", "548756-5497");
+		Medico v2 = new Veterinario("Kosmolino", "1203948", "5252-58746");
+		Medico v3 = new Veterinario("Junior Jr", "123412", "2365-9875");
+
+		veterinarioChefe.adicionar(v1);
+		veterinarioChefe.adicionar(v2);
+		veterinarioChefe.adicionar(v3);
+
+		veterinarioChefe.adicionar(enfermeiroChefe);
+
+		Medico e1 = new Veterinario("Lisa", "123414", "04928-3054");
+		Medico e2 = new Veterinario("Alexis", "1234123", "412535");
+
+		enfermeiroChefe.adicionar(e1);
+		enfermeiroChefe.adicionar(e2);
+
+		lista = medicoChefe.obterLista();
+		for (Medico m : lista) {
+			System.out.println(m.toString());
+		}
+
 	}
 }
