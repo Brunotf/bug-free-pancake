@@ -1,7 +1,6 @@
 package edu.services;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.LinkedHashSet;
 
 import javax.servlet.ServletException;
@@ -54,20 +53,15 @@ public class ClienteController extends HttpServlet {
 			c.setEndereco(txtEnd);
 			c.setTelefone(txtTel);
 			c.setEmail(txtEmail);
-			try {
-				cDao.adicionarCliente(c);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			
+			cDao.adicionarCliente(c);
+
 			message = String.format("Foi cadastrado o cliente %s\n", c.toString());
 
 		} else if ("pesquisar".equals(cmd)) {
-			try {
-				listaCliente = cDao.consultarCliente(txtNome);
-				request.getSession().setAttribute("LISTA_CLIENTE", listaCliente);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			listaCliente = cDao.consultarCliente(txtNome);
+			request.getSession().setAttribute("LISTA_CLIENTE", listaCliente);
+
 		} else if ("atualizar".equals(cmd)) {
 			Cliente c = new Cliente();
 
@@ -75,11 +69,9 @@ public class ClienteController extends HttpServlet {
 			c.setCpf(txtCpf);
 			c.setEndereco(txtEnd);
 			c.setTelefone(txtTel);
-			try {
-				cDao.atualizarCliente(c);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			
+			cDao.atualizarCliente(c);
+			
 			message = String.format("Foi atualizado o cliente %s\n", c.toString());
 
 		} else if ("voltar".contains(cmd)) {
