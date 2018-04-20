@@ -31,6 +31,8 @@ public class Main {
 
 		enfermeiroChefe.adicionar(e1);
 		enfermeiroChefe.adicionar(e2);
+		
+		
 		lista = medicoChefe.obterLista();
 
 		System.out.println("Lista completa");
