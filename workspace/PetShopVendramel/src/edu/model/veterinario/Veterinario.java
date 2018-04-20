@@ -1,6 +1,7 @@
 package edu.model.veterinario;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 import edu.model.consulta.Consulta;
 
@@ -109,6 +110,22 @@ public class Veterinario {
 		sb.append("CRMV : " + getCrmv());
 		return sb.toString();
 
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		// self check
+		if (this == o)
+			return true;
+		// null check
+		if (o == null)
+			return false;
+		// type check and cast
+		if (getClass() != o.getClass())
+			return false;
+		Veterinario veterinario = (Veterinario) o;
+		// field comparison
+		return Objects.equals(nome, veterinario.nome) && Objects.equals(crmv, veterinario.crmv);
 	}
 
 }

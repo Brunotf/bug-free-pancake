@@ -1,4 +1,5 @@
 package Composite;
+
 import java.util.LinkedList;
 
 public class Main {
@@ -30,8 +31,17 @@ public class Main {
 
 		enfermeiroChefe.adicionar(e1);
 		enfermeiroChefe.adicionar(e2);
-
 		lista = medicoChefe.obterLista();
+
+		System.out.println("Lista completa");
+		for (Medico m : lista) {
+			System.out.println(m);
+		}
+		
+		System.out.println("Lista depois da remoção");
+		
+		enfermeiroChefe.remover(e1);
+
 		for (Medico m : lista) {
 			System.out.println(m.toString());
 		}

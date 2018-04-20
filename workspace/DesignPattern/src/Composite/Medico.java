@@ -1,9 +1,12 @@
 package Composite;
-public class Medico {	
+
+import java.util.Objects;
+
+public class Medico {
 	protected String nome;
-	
+
 	protected String crmv;
-	
+
 	protected String telefone;
 
 	public String getNome() {
@@ -29,14 +32,30 @@ public class Medico {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+
+	@Override
+	public boolean equals(Object o) {
+		// self check
+		if (this == o)
+			return true;
+		// null check
+		if (o == null)
+			return false;
+		// type check and cast
+		if (getClass() != o.getClass())
+			return false;
+		Medico medico = (Medico) o;
+		// field comparison
+		return Objects.equals(nome, medico.nome) && Objects.equals(crmv, medico.crmv);
+	}
+
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		 sb.append(nome + " : ");
-		 sb.append(crmv);
-		 
-		 return sb.toString();
+		sb.append(nome + " : ");
+		sb.append(crmv);
+
+		return sb.toString();
 	}
 
 }
