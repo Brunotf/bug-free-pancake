@@ -8,9 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Gestão de médicos</title>
 <link rel="stylesheet" href="./resources/bootstrap.min.css" />
-<script src="./resources/jquery-3.2.1.slim.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./resources/datatables.min.css" />
+<script src="./resources/jquery-3.3.1.js"></script>
 <script src="./resources/popper.min.js"></script>
 <script src="./resources/bootstrap.min.js"></script>
+<script type="text/javascript" src="./resources/datatables.min.js"></script>
 </head>
 <body>
     <%

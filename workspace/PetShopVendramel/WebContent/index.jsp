@@ -16,15 +16,16 @@
 	<h1>Página inicial</h1>
 
 	<div class="container">
-		<form action="./IndexController" method="post"></form>
+		<form action="./IndexController" method="post">
 
-		<div class="row">
-			<div class="col-sm-9">
-				<button class="btn btn-primary" id="btnCliente" type="submit"
-					name="cmd" value="gestaoCliente">Gestão de clientes</button>
+			<div class="row">
+				<div class="col-sm-9">
+					<button class="btn btn-primary" id="btnCliente" type="submit"
+						name="cmd" value="gestaoCliente">Gestão de clientes</button>
+				</div>
 			</div>
-		</div>
-
+			
+		</form>
 	</div>
 </body>
 </html>
