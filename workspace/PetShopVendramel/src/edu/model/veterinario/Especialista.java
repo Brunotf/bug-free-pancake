@@ -5,10 +5,8 @@ import java.util.Objects;
 import edu.enumeradas.TipoEspecialidade;
 
 public class Especialista extends Veterinario {
-
 	private TipoEspecialidade especialidade;
 
-	@SuppressWarnings("unused")
 	private String sociedadeEspecialista;
 
 	public TipoEspecialidade getEspecialidade() {
@@ -17,6 +15,10 @@ public class Especialista extends Veterinario {
 
 	public void setEspecialidade(TipoEspecialidade especialidade) {
 		this.especialidade = especialidade;
+	}
+	
+	public String getSociedadeEspecialista() {
+		return sociedadeEspecialista;
 	}
 
 	public void setSociedadeEspecialista(String sociedadeEspecialista) {
@@ -30,6 +32,15 @@ public class Especialista extends Veterinario {
 
 	public void horaExtra() {
 		System.out.println("Horas guardadas no banco de horas.");
+	}
+	
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("Dr. " + getNome() + "\n");
+		sb.append("CRMV: " + getCrmv());
+		sb.append("Especialidade: " + getEspecialidade());
+		return sb.toString();
 	}
 
 	public boolean equals(Object o) {

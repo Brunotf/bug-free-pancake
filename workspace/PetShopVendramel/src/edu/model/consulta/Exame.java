@@ -1,7 +1,8 @@
 package edu.model.consulta;
 
 public class Exame {
-
+	private double valor;
+	
 	private String dataColeta;
 
 	private String dataResultado;
@@ -9,6 +10,14 @@ public class Exame {
 	private String resultado;
 
 	private String tipo;
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 
 	public String getDataColeta() {
 		return dataColeta;

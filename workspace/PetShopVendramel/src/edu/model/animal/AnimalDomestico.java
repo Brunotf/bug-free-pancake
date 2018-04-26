@@ -1,7 +1,6 @@
 package edu.model.animal;
 
 public class AnimalDomestico extends Animal {
-	
 	private String rga;
 	
 	public String getRga() {

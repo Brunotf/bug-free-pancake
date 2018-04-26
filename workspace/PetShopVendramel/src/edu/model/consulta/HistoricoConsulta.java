@@ -1,9 +1,9 @@
 package edu.model.consulta;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 
 public class HistoricoConsulta {
-
 	private int numProntuario;
 
 	private String dataHora;
@@ -14,9 +14,9 @@ public class HistoricoConsulta {
 
 	private String observacoes;
 
-	private HashSet<Consulta> consulta;
+	private LinkedList<Consulta> consulta;
 
-	private HashSet<Exame> exame;
+	private LinkedList<Exame> exame;
 
 	public int getNumProntuario() {
 		return numProntuario;
@@ -58,19 +58,19 @@ public class HistoricoConsulta {
 		this.observacoes = observacoes;
 	}
 
-	public HashSet<Consulta> getConsulta() {
+	public LinkedList<Consulta> getConsulta() {
 		return consulta;
 	}
 
-	public void setConsulta(HashSet<Consulta> consulta) {
+	public void setConsulta(LinkedList<Consulta> consulta) {
 		this.consulta = consulta;
 	}
 
-	public HashSet<Exame> getExame() {
+	public LinkedList<Exame> getExame() {
 		return exame;
 	}
 
-	public void setExame(HashSet<Exame> exame) {
+	public void setExame(LinkedList<Exame> exame) {
 		this.exame = exame;
 	}
 

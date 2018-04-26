@@ -1,8 +1,8 @@
 package edu.model.animal;
 
 public class AnimalSilvestre extends Animal {
-
 	private String marcacaoIndividual;
+	
 	private String numeroIbama;
 	
 	public String getMarcacaoIndividual() {

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedHashSet;
+import java.util.LinkedList;
 
 import edu.model.cliente.Cliente;
 import edu.util.DBUtil;
@@ -28,13 +28,13 @@ public class ClienteDAOImpl implements ClienteDAO {
 			ps.execute();
 			ps.close();
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace(System.err);
 		}
 	}
 
 	@Override
-	public LinkedHashSet<Cliente> consultarCliente(String txtNome) {
-		LinkedHashSet<Cliente> lista = new LinkedHashSet<>();
+	public LinkedList<Cliente> consultarCliente(String txtNome) {
+		LinkedList<Cliente> lista = new LinkedList<>();
 		try {
 			con = DBUtil.getInstance().getConnection();
 			String sql = "SELECT * FROM cliente WHERE nome like ?";
@@ -54,7 +54,7 @@ public class ClienteDAOImpl implements ClienteDAO {
 				lista.add(c);
 			}
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace(System.err);
 		}
 
 		return lista;
@@ -76,7 +76,7 @@ public class ClienteDAOImpl implements ClienteDAO {
 			ps.execute();
 			ps.close();
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace(System.err);
 		}
 	}
 
@@ -99,9 +99,9 @@ public class ClienteDAOImpl implements ClienteDAO {
 				return 1;
 			}
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace(System.err);
 		}
-		
+
 		return -1;
 	}
 }

@@ -7,7 +7,6 @@ import java.util.LinkedList;
 import edu.model.animal.Animal;
 
 public class AnimalDAOImpl implements AnimalDAO {
-	
 	private Connection con;
 
 	@Override

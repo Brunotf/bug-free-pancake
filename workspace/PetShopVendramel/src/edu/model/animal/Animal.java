@@ -1,13 +1,12 @@
 package edu.model.animal;
 
-import java.util.HashSet;
+import java.util.LinkedList;
 
 import edu.enumeradas.TipoEspecie;
 import edu.model.cliente.Cliente;
 import edu.model.consulta.Consulta;
 
-public class Animal implements Comparable<Animal>{
-
+public class Animal implements Comparable<Animal> {
 	protected String nome;
 	
 	protected TipoEspecie especie;
@@ -20,7 +19,7 @@ public class Animal implements Comparable<Animal>{
 	
 	protected int idade;
 
-	protected HashSet<Consulta> consulta;
+	protected LinkedList<Consulta> consulta;
 	
 	protected Cliente cpf;
 	
@@ -72,11 +71,11 @@ public class Animal implements Comparable<Animal>{
 		this.idade = porte;
 	}
 
-	public HashSet<Consulta> getConsulta() {
+	public LinkedList<Consulta> getConsulta() {
 		return consulta;
 	}
 
-	public void setConsulta(HashSet<Consulta> consulta) {
+	public void setConsulta(LinkedList<Consulta> consulta) {
 		this.consulta = consulta;
 	}
 

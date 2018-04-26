@@ -1,21 +1,31 @@
 package edu.model.consulta;
 
+import edu.enumeradas.TipoAtendimento;
 import edu.model.animal.Animal;
 import edu.model.veterinario.Veterinario;
 
 public class Consulta {
-
+	private double valor;
+	
 	private String dataHora;
 
 	private String procedimento;
 
 	private String sintomas;
 
-	private String tipoAtend;
+	private TipoAtendimento tipoAtend;
 
 	private Animal animal;
 
 	private Veterinario veterinario;
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 
 	public String getDataHora() {
 		return dataHora;
@@ -41,11 +51,11 @@ public class Consulta {
 		this.sintomas = sintomas;
 	}
 
-	public String getTipoAtend() {
+	public TipoAtendimento getTipoAtend() {
 		return tipoAtend;
 	}
 
-	public void setTipoAtend(String tipoAtend) {
+	public void setTipoAtend(TipoAtendimento tipoAtend) {
 		this.tipoAtend = tipoAtend;
 	}
 

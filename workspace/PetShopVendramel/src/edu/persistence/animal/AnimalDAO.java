@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import edu.model.animal.Animal;
 
 public interface AnimalDAO {
-	
 	public void adicionarAnimal(Animal a) throws SQLException;
 	
 	public LinkedList<Animal> consultarAnimal(String txtnome) throws SQLException;

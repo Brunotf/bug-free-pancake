@@ -6,7 +6,6 @@ import java.util.Objects;
 import edu.model.consulta.Consulta;
 
 public class Veterinario {
-
 	protected String crmv;
 
 	protected String nome;
@@ -109,7 +108,6 @@ public class Veterinario {
 		sb.append("Dr. " + getNome() + "\n");
 		sb.append("CRMV : " + getCrmv());
 		return sb.toString();
-
 	}
 	
 	@Override

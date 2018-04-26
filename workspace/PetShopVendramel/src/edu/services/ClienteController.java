@@ -1,7 +1,7 @@
 package edu.services;
 
 import java.io.IOException;
-import java.util.LinkedHashSet;
+import java.util.LinkedList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,11 +35,11 @@ public class ClienteController extends HttpServlet {
 
 		ClienteDAO cDao = new ClienteDAOImpl();
 
-		LinkedHashSet<Cliente> listaCliente = (LinkedHashSet<Cliente>) getServletContext()
+		LinkedList<Cliente> listaCliente = (LinkedList<Cliente>) getServletContext()
 				.getAttribute("LISTA_CLIENTE");
 
 		if (listaCliente == null) {
-			listaCliente = new LinkedHashSet<>();
+			listaCliente = new LinkedList<>();
 			getServletContext().setAttribute("LISTA_CLIENTE", listaCliente);
 		}
 
