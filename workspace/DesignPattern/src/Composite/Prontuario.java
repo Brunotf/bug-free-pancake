@@ -3,25 +3,21 @@ package Composite;
 import java.util.LinkedList;
 
 public class Prontuario {
-	private LinkedList<Ficha> lista;
+	private LinkedList<Ficha> prontuario;
 
 	public void adicionar(Ficha f) {
-		if (lista == null) {
-			lista = new LinkedList<>();
+		if (prontuario == null) {
+			prontuario = new LinkedList<>();
 		}
-		lista.add(f);
-	}
-
-	public void remover(Ficha f) {
-		lista.remove(f);
+		prontuario.add(f);
 	}
 
 	public Ficha obterFilha(int i) {
-		return lista.get(i);
+		return prontuario.get(i - 1);
 	}
 
 	public LinkedList<Ficha> obterLista() {
-		return lista;
+		return prontuario;
 	}
 
 }

@@ -6,9 +6,8 @@ import java.util.Objects;
 public class Historico extends Ficha {
 	private String procedimento;
 	private String diagnostico;
-	
-	public Historico(Date dataHora, String tipo, String procedimento, 
-					 String diagnostico) {
+
+	public Historico(Date dataHora, String tipo, String procedimento, String diagnostico) {
 		this.dataHora = dataHora;
 		this.tipo = tipo;
 		this.procedimento = procedimento;
@@ -30,7 +29,7 @@ public class Historico extends Ficha {
 	public void setDiagnostico(String diagnostico) {
 		this.diagnostico = diagnostico;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
 		// Auto comparação
@@ -52,17 +51,16 @@ public class Historico extends Ficha {
 		Ficha f = (Ficha) o;
 		return Objects.equals(dataHora, f.dataHora) && Objects.equals(tipo, f.tipo);
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		
+
 		sb.append(dataHora.toString() + '\n');
 		sb.append(tipo + '\n');
 		sb.append(procedimento + '\n');
 		sb.append(diagnostico + "\n\n");
-		
+
 		return sb.toString();
 	}
-
 }
